@@ -1,12 +1,13 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLoaderData } from 'react-router-dom';
 import Header from '../Header/Header';
 
 const Home = () => {
+  const tShirts = useLoaderData();
+  console.log(tShirts);
   return (
     <div>
-      <Header></Header>
-      <Outlet></Outlet>
+      <h1>This is home</h1>
     </div>
   );
 };
